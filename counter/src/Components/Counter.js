@@ -13,6 +13,7 @@ export default class counter extends Component {
     }
 
     decrement = () => {
+        if(this.state.count === 0) return;
         this.setState({count:this.state.count - 1});
     }
 
@@ -21,10 +22,11 @@ export default class counter extends Component {
         
       <div className='App'>
         <h1>Counter App</h1>
+        <h2 className='count-number'>{this.state.count}</h2>
         <button onClick={this.increment} className='counter'>+</button>
         <button onClick={this.decrement} className='counter'>-</button>
-        <h2 className='count-number'>{this.state.count}</h2>
       </div>
+      
     )
   }
 }

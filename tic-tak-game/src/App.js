@@ -6,9 +6,9 @@ import Game from './Components/Game';
 function App() {
   return (
     <>
+      <Game/>
       <Board/>
       <Square/>
-      <Game/>
     </>
   );
 }
