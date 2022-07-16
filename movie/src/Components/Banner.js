@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import React, { Component } from 'react'
 import { movies } from './getMovies'
 export default class Banner extends Component {
@@ -8,7 +7,7 @@ export default class Banner extends Component {
         // let movie = "";
         return (
           <>
-            {movie == "" ? (
+            {movie === "" ? (
               <div className="spinner-border text-danger" role="status">
                 <span className="visually-hidden">Loading...</span>
               </div>
