@@ -39,11 +39,11 @@
 
 .banner-card{
   background-color: white;
-  width:100vw;
+  width:99vw;
 }
 
 .banner-img{
-  height:70vh;
+  height:75vh;
   width:100%;
 }
 
@@ -57,7 +57,7 @@
 .banner-text{
   position:absolute;
   color:white;
-  top:60vh;
+  top:62vh;
   left:5vw;
   margin-right: 5vw;
   /* overflow: hidden; */

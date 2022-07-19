@@ -5,11 +5,11 @@ import API_KEY from "../appkey";
 export default class List extends Component {
   constructor() {
     super();
-    // console.log("constructor is called");
+    console.log("constructor is called");
     this.state = {
       hover: "",
       parr: [1], //ab tak main konse page par hu , or what page result am i showing ,
-      currPage: 4,
+      currPage: 1,
       movies:[],
     };
   }
@@ -26,23 +26,59 @@ export default class List extends Component {
       });
   };
 
-  async componentDidMount(){
-    // console.log("componentDidMount is called");
-    // console.log(API_KEY);
+  changeMovies = async () => {
+     console.log(this.state.currPage);
+    console.log("changeMovies called");
     let ans = await axios.get(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`
-    )
-    console.log(ans.data);
-
+    );
+    // console.log(ans.data);
     this.setState({
-      movies:[...ans.data.results] //[{},{},{}]
+      movies: [...ans.data.results] //[{},{},{}]
     })
+  }
+
+  handleNext = () => {
+    let tempArr = [];
+    for (let i = 1; i <= this.state.parr.length + 1; i++){
+      tempArr.push(i); //[1,2]
+    } 
+    this.setState({
+      parr: [...tempArr],
+      currPage: this.state.currPage + 1
+    },this.changeMovies);
+    // this.changeMovies();
     
   }
 
+  handlePrevious = () => {
+    if(this.state.currPage !== 1){
+      this.setState({
+        currPage: this.state.currPage - 1
+      },this.changeMovies);
+    }   
+    // this.changeMovies();
+  }
 
+  handlePageNo = (pageNum) =>{
+    this.setState({
+      currPage: pageNum
+    },this.changeMovies);
+  }
+
+  async componentDidMount() {
+    console.log("componentDidMount is called");
+    // console.log(API_KEY);
+    let ans = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`
+    );
+    // console.log(ans.data);
+    this.setState({
+      movies:[...ans.data.results] //[{},{},{}]
+    })
+  }
   render() {
-    // console.log("render is called");
+    console.log("render is called");
     // let movie = movies.results; //fetch
     return (
       <>
@@ -85,25 +121,26 @@ export default class List extends Component {
                 </div>
               ))}
             </div>
+
             <div className="pagination">
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
                   <li class="page-item">
-                    <a class="page-link" href="#">
+                    <a class="page-link" onClick={this.handlePrevious}>
                       Previous
                     </a>
                     </li>
                     {
                       this.state.parr.map(pageNum => (
                         <li class="page-item">
-                          <a class="page-link" href="#">
+                          <a class="page-link" onClick={this.handlePageNo}>
                             {pageNum}
                           </a>
                         </li>
                       ))
                     }
                   <li class="page-item">
-                    <a class="page-link" href="#">
+                    <a class="page-link" onClick={this.handleNext}>
                       Next
                     </a>
                   </li>
