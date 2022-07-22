@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 // import { movies } from "./getMovies";
 import axios from 'axios'
@@ -11,6 +12,7 @@ export default class List extends Component {
       parr: [1], //ab tak main konse page par hu , or what page result am i showing ,
       currPage: 1,
       movies:[],
+      favMov:[] //this will store the id of the movies added to favourits
     };
   }
 
@@ -66,6 +68,26 @@ export default class List extends Component {
     },this.changeMovies);
   }
 
+  handleFavourites = (movieObj) => {
+    let localStorageMovies = JSON.parse(localStorage.getItem("movies")) || [];
+
+    if(this.state.favMov.includes(movieObj.id)){
+      localStorageMovies = localStorageMovies.filter(
+        (movie) => movie.id !== movieObj.id
+      );
+    }else{
+      localStorageMovies.push(movieObj);
+    }
+
+    // console.log(localStor  ageMovies);
+
+    localStorage.setItem("movies",JSON.stringify(localStorageMovies));
+    let tempData = localStorageMovies.map(movieObj => movieObj.id);
+    this.setState({
+      favMov: [...tempData]
+    });
+  }
+
   async componentDidMount() {
     console.log("componentDidMount is called");
     // console.log(API_KEY);
@@ -113,8 +135,11 @@ export default class List extends Component {
                       </p> */}
                   <div className="button-wrapper">
                     {this.state.hover === movieObj.id && (
-                      <a href="#" class="btn btn-danger movie-button">
-                        Add to Favourites
+                      <a 
+                        class="btn btn-danger movie-button"
+                        onClick={() => this.handleFavourites(movieObj)}
+                      >
+                          {this.state.favMov.includes(movieObj.id)?"Remove to Favourites":"Add to Favourites"}
                       </a>
                     )}
                   </div>
