@@ -1,10 +1,6 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable jsx-a11y/scope */
-/* eslint-disable array-callback-return */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-// import axios from "axios";
-// import API_KEY from "../appkey";
+import axios from "axios";
+import API_KEY from "../appkey";
 export default class Favourites extends Component {
     constructor() {
         super();
@@ -13,8 +9,8 @@ export default class Favourites extends Component {
             genre: [],
             currGenre: "All Genre",
             currText: "",
-            limit:5,
-            currpage:1,
+            limit: 5,
+            currPage: 1,
         };
     }
 
@@ -113,19 +109,19 @@ export default class Favourites extends Component {
         })
     }
 
-    handlechange = (page) => {
-        this.setState ({
-            currpage : page
+    handlePageNum = (page) => {
+        this.setState({
+            currPage: page
         })
     }
 
     handleDelete = (id) => {
         let newarr = [];
-        newarr = this.state.movies.filter((movieObj)=>movieObj.id !== id)
-        this.setState ({
-            movies : [...newarr]
+        newarr = this.state.movies.filter((movieObj) => movieObj.id !== id)
+        this.setState({
+            movies: [...newarr]
         })
-        localStorage.setItem("movies",JSON.stringify(newarr));
+        localStorage.setItem("movies", JSON.stringify(newarr));
     }
 
     render() {
@@ -150,32 +146,33 @@ export default class Favourites extends Component {
             10752: "War",
             37: "Western",
         };
-        let filteredMovies = [];
+        let filteredMovies = this.state.movies;
         if (this.state.currText === '') {
             filteredMovies = this.state.movies;
         }
         else {
-            filteredMovies = this.state.movies.filter((movieObj) => {
+            filteredMovies = filteredMovies.filter((movieObj) => {
                 let movieName = movieObj.original_title.toLowerCase();
-                return movieName.includes(this.state.currText.toLowerCase());//[t,o,p, ,g,u,n, ,m,a,v,e,r,i,c,k]
-            })
+                return movieName.includes(this.state.currText);//[t,o,p, ,g,u,n, ,m,a,v,e,r,i,c,k]
+            });
         }
 
         if (this.state.currGenre !== "All Genre") {
-            filteredMovies = this.state.movies.filter(
-                (movieObj) => genreId[movieObj.genre_ids[0]] === this.state.currGenre
+            filteredMovies = filteredMovies.filter(
+                (movieObj) => genreId[movieObj.genre_ids[0]] == this.state.currGenre
             );
         }
 
-        let pages = Math.ceil(filteredMovies.length/this.state.limit)
+        let pages = Math.ceil(filteredMovies.length / this.state.limit);
+
         let pagesarr = [];
-        for(let i = 1;i<=pages; i++){
+        for (let i = 1; i <= pages; i++) {
             pagesarr.push(i);
         }
 
-        let si = (this.state.currpage - 1)*this.state.limit;
-        let ei = si + this.state.limit;
-        filteredMovies = filteredMovies.slice(si,ei)
+        let si = (this.state.currPage - 1) * this.state.limit;
+        let ei = si + this.state.limit - 1;
+        filteredMovies = filteredMovies.slice(si, ei + 1);
 
         return (
             <div class="row" style={{ margin: "1rem" }}>
@@ -207,12 +204,12 @@ export default class Favourites extends Component {
                             value={this.state.currText}
                             onChange={this.handleText}
                         ></input>
-                        <input 
-                            type="number" 
-                            className="col-4" 
-                            placeholder="Row Count" 
-                            value={this.state.limit} 
-                            onChange={(e)=>this.setState({limit:e.target.value})}
+                        <input
+                            type="number"
+                            className="col-4"
+                            placeholder="Row Count"
+                            // value={this.state.limit}
+                            onChange={(e) => this.setState({ limit: e.target.value })}
                         >
                         </input>
                     </div>
@@ -249,7 +246,7 @@ export default class Favourites extends Component {
                                         <td>{movieObj.popularity}</td>
                                         <td>{movieObj.vote_average}</td>
                                         <td>
-                                            <button class="btn btn-outline-danger" onClick={()=> this.handleDelete(movieObj.id)}>Delete</button>
+                                            <button class="btn btn-outline-danger" onClick={() => this.handleDelete(movieObj.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 ))}
@@ -257,23 +254,19 @@ export default class Favourites extends Component {
                         </table>
 
                     </div>
-
-                    <div className="pagination">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                {
-                                    pagesarr.map((page) =>(
-                                        <li class="page-item">
-                                            <a class="page-link" onClick = {() => this.handlechange(page)}>
-                                                {page}
-                                             </a>
-                                         </li>
-                                    ))
-                                }
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {pagesarr.map((page) => (
+                            <li class="page-item">
+                                <a class="page-link" onClick={() => this.handlePageNum(page)}>
+                                    {page}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
             </div>
         );
     }

@@ -6,7 +6,7 @@ import Banner from './Components/Banner';
 import List from './Components/List';
 import Favourites from './Components/Favourites';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-
+import About from './Components/About';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +23,7 @@ function App() {
       />
 
       <Route path = "/fav" element={<Favourites/>} />
+      <Route path = "/about" element={<About />} />
     </Routes>
 
   </BrowserRouter>

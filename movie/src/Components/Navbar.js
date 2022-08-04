@@ -11,6 +11,10 @@ export default class Navbar extends Component {
         <Link to="/fav" style={{ textDecoration: "none" }}>
           <h2 style={{ marginLeft: "2rem" }}>Favourites</h2>
         </Link>
+
+        <Link to="/about" style={{ textDecoration: "none" }}>
+          <h2 style={{ marginLeft: "2rem" }}>About</h2>
+        </Link>
       </div>
     )
   }
