@@ -39,7 +39,7 @@
 }
 
 .videos-container::-webkit-scrollbar{
-    /* display: none; */
+    display: none;
 }
 .post-container{
     height: 100%;
@@ -51,8 +51,37 @@
     height: 100%;
     width:20rem;
     object-fit: contain;
-    background-color: lightpink;
+    /* background-color: lightpink; */
     border-radius: 15px;
+    border: 1px solid black;
+}
+
+.video-info{
+    position: absolute;
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    bottom: 55px;
+}
+
+.avatar-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    width: 70%;
+}
+
+.avatar-container>p{
+    margin-left: 0.5rem;
+}
+
+.like-post{
+    color: red;
+    width: 10%;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-right: 0.1rem;
+    flex-direction: column;
 }
 
 @media screen and (max-width:500px){
