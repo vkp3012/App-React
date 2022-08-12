@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{ useContext } from 'react'
 import TextField from '@mui/material/TextField';
 import Image from "next/image"
 import logo from '../../assets/Instagram.jpg'
@@ -10,7 +10,7 @@ import bg3 from '../../assets/bg3.jpg'
 import bg4 from '../../assets/bg4.jpg'
 import bg5 from '../../assets/bg5.jpg'
 
-import {AuthContext} from '../../context/auth'
+import { AuthContext } from '../../context/auth'
 
 function index() {
     const [email,setEmail] = React.useState('');

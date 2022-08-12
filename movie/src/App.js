@@ -7,10 +7,13 @@ import List from './Components/List';
 import Favourites from './Components/Favourites';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import About from './Components/About';
+import Profile from './Components/Profile';
 function App() {
   return (
+
     <BrowserRouter>
     <Navbar />
+
     <Routes>
       <Route 
         path = "/" 
@@ -24,6 +27,18 @@ function App() {
 
       <Route path = "/fav" element={<Favourites/>} />
       <Route path = "/about" element={<About />} />
+
+        <Route 
+          path = "/profile" 
+          element={
+          <>
+            <Profile />
+            <Favourites />
+          </>
+          }
+
+        />
+
     </Routes>
 
   </BrowserRouter>
