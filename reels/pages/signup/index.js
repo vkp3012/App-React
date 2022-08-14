@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
+import Link from 'next/link'
 function index() {
     return (
         <div className='signup-container'>
@@ -67,7 +68,9 @@ function index() {
 
             <div className='botton-card'>
                 Already Have an account ?{" "}
-                <span style={{ color: "blueviolet" }}>Login</span>
+                <Link href='/login'>
+                    <span style={{ color: "blueviolet" }}>Login</span>
+                </Link>    
             </div>
         </div>
     )

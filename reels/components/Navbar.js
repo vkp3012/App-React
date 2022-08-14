@@ -5,25 +5,25 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
 import insta from '../assets/Instagram.jpg'
-// import insta from '../assets/instagram.jpeg'
 import Image from 'next/image'
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import AddBoxIcon from '@mui/icons-material/AddBox';
-// import AddBox from '@mui/icons-material/AddBox';
 import ForumRoundedIcon from '@mui/icons-material/ForumRounded';
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 
-const settings = ['Profile', 'Setting','Logout'];
+import { AuthContext } from '../context/auth';
+import { useRouter } from 'next/router';
+import { async } from '@firebase/util';
+
+const settings = ['Profile', 'Setting', 'Logout'];
 
 const adds = ['UPLOAD VIDEO'];
 
@@ -34,6 +34,8 @@ const ResponsiveAppBar = () => {
 
     const [anchorElVideo, setAnchorElVideo] = React.useState(null);
 
+    const { logout } = React.useContext(AuthContext);
+    const router = useRouter();
 
     // const handleOpenNavMenu = (event) => {
     //     setAnchorElNav(event.currentTarget);
@@ -60,6 +62,11 @@ const ResponsiveAppBar = () => {
         setAnchorElVideo(null);
     };
 
+
+    const handleLogout = async() => {
+        await logout();
+        router.push('/login')
+    }
 
 
     return (
@@ -134,11 +141,11 @@ const ResponsiveAppBar = () => {
               </Button>
             ))} */}
 
-                 </Box>
+                    </Box>
 
                     <Box sx={{ flexGrow: 0 }} className="nav-icons-container">
                         {/* Home Icon */}
-                        
+
                         <Tooltip title="Home">
                             <IconButton sx={{ p: 0 }} >
                                 <HomeIcon fontSize='large' className='nav-icons' />
@@ -158,15 +165,15 @@ const ResponsiveAppBar = () => {
                                 <AddBoxIcon fontSize='large' className='nav-icons' />
                             </IconButton>
                         </Tooltip>
-                        
+
 
                         {/* explore */}
                         <Tooltip title="Explore">
-                            <IconButton  sx={{ p: 0 }} >
+                            <IconButton sx={{ p: 0 }} >
                                 <ExploreIcon fontSize='large' className='nav-icons' />
                             </IconButton>
                         </Tooltip>
-                       
+
 
                         <Tooltip title="Profile">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -180,7 +187,7 @@ const ResponsiveAppBar = () => {
 
                         <Menu
                             sx={{ mt: '45px' }}
-                            id = "menu-appbar"
+                            id="menu-appbar"
                             anchorEl={anchorElUser}
                             anchorOrigin={{
                                 vertical: 'top',
@@ -195,40 +202,49 @@ const ResponsiveAppBar = () => {
                             onClose={handleCloseUserMenu}
                         >
 
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={handleCloseUserMenu}>
+                                <Typography textAlign="center">Profile</Typography>
+                            </MenuItem>
+
+                            <MenuItem onClick={handleCloseUserMenu}>
+                                <Typography textAlign="center">Setting</Typography>
+                            </MenuItem>
+
+                            <MenuItem onClick={() => {
+                                handleLogout()
+                                handleCloseUserMenu()
+                            }}>
+                                <Typography textAlign="center">Logout</Typography>
+                            </MenuItem>
                         </Menu>
 
                         <Menu
-                                sx={{ mt: '50px' }}
-                                id="add-appbar"
-                                anchorEl={anchorElVideo}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
+                            sx={{ mt: '50px' }}
+                            id="add-appbar"
+                            anchorEl={anchorElVideo}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
 
-                                keepMounted
+                            keepMounted
 
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
 
-                                open={Boolean(anchorElVideo)}
-                                onClose={handleCloseUserVideo}
+                            open={Boolean(anchorElVideo)}
+                            onClose={handleCloseUserVideo}
                         >
                             {adds.map((add) => (
-                                    <MenuItem key={add} onClick={handleCloseUserVideo}>
-                                        <Typography textAlign="center">{add}</Typography>
-                                    </MenuItem>
+                                <MenuItem key={add} onClick={handleCloseUserVideo}>
+                                    <Typography textAlign="center">{add}</Typography>
+                                </MenuItem>
                             ))}
 
                         </Menu>
-                            
+
                     </Box>
                 </Toolbar>
             </Container>
