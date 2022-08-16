@@ -14,7 +14,7 @@ function Feed() {
                     <div className='video-info'>
                         <div className = 'avatar-container'>
                             <Avatar
-                                alt="Remy Sharp"
+                                alt="Vivek Patel"
                                 src="/static/images/avatar/2.jpg"
                                 sx={{ margin: "0.5rem" }}
                             />

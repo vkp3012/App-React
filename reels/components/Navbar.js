@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
@@ -18,12 +18,12 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import ForumRoundedIcon from '@mui/icons-material/ForumRounded';
 
 // const pages = ['Products', 'Pricing', 'Blog'];
-
+// import {chat} from './chat'
 import { AuthContext } from '../context/auth';
 import { useRouter } from 'next/router';
-import { async } from '@firebase/util';
+// import { async } from '@firebase/util';
 
-const settings = ['Profile', 'Setting', 'Logout'];
+// const settings = ['Profile', 'Setting', 'Logout'];
 
 const adds = ['UPLOAD VIDEO'];
 
@@ -34,7 +34,11 @@ const ResponsiveAppBar = () => {
 
     const [anchorElVideo, setAnchorElVideo] = React.useState(null);
 
+    
     const { logout } = React.useContext(AuthContext);
+    const { profile } = React.useContext(AuthContext);
+    const { about } = React.useContext(AuthContext);
+    const { chat } = React.useContext(AuthContext);
     const router = useRouter();
 
     // const handleOpenNavMenu = (event) => {
@@ -66,6 +70,28 @@ const ResponsiveAppBar = () => {
     const handleLogout = async() => {
         await logout();
         router.push('/login')
+    }
+
+    const handleProfile = async() => {
+        // await profile();
+        router.push('/profile')
+    }
+
+    const handleAbout = async() => {
+        // await profile();
+        router.push('/about')
+    }
+
+    const handleChat = async() => {
+        router.push('/chat')
+    }
+
+    const handleHome = async() => {
+        router.push('/home')
+    }
+
+    const handleOpenUserExplore = async() => {
+        router.push('/explore')
     }
 
 
@@ -147,14 +173,14 @@ const ResponsiveAppBar = () => {
                         {/* Home Icon */}
 
                         <Tooltip title="Home">
-                            <IconButton sx={{ p: 0 }} >
+                            <IconButton onClick={() => handleHome()} sx={{ p: 0 }} >
                                 <HomeIcon fontSize='large' className='nav-icons' />
                             </IconButton>
                         </Tooltip>
 
                         {/* chat */}
                         <Tooltip title="Chat">
-                            <IconButton sx={{ p: 0 }} >
+                            <IconButton  onClick={() => handleChat()} sx={{ p: 0 }} >
                                 <ForumRoundedIcon fontSize='large' className='nav-icons' />
                             </IconButton>
                         </Tooltip>
@@ -169,17 +195,17 @@ const ResponsiveAppBar = () => {
 
                         {/* explore */}
                         <Tooltip title="Explore">
-                            <IconButton sx={{ p: 0 }} >
+                            <IconButton onClick={handleOpenUserExplore} sx={{ p: 0 }} >
                                 <ExploreIcon fontSize='large' className='nav-icons' />
                             </IconButton>
                         </Tooltip>
 
 
-                        <Tooltip title="Profile">
+                        <Tooltip title="Setting">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar
-                                    alt="Remy Sharp"
-                                    src="/static/images/avatar/2.jpg"
+                                    alt="Vivek Patel"
+                                    src="/static/images/avatar/10.jpg"
                                     sx={{ margin: "0.5rem" }}
                                 />
                             </IconButton>
@@ -202,12 +228,18 @@ const ResponsiveAppBar = () => {
                             onClose={handleCloseUserMenu}
                         >
 
-                            <MenuItem onClick={handleCloseUserMenu}>
+                            <MenuItem onClick={()=> {
+                                handleProfile()
+                                handleCloseUserMenu()
+                            }}>
                                 <Typography textAlign="center">Profile</Typography>
                             </MenuItem>
 
-                            <MenuItem onClick={handleCloseUserMenu}>
-                                <Typography textAlign="center">Setting</Typography>
+                            <MenuItem onClick={()=> {
+                                handleAbout()
+                                handleCloseUserMenu()
+                            }}>
+                                <Typography textAlign="center">About</Typography>
                             </MenuItem>
 
                             <MenuItem onClick={() => {

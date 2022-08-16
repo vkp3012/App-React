@@ -41,6 +41,7 @@
 .videos-container::-webkit-scrollbar{
     display: none;
 }
+
 .post-container{
     height: 100%;
     width:20rem;
