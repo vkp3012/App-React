@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
 }
+
 .navbar{
     display:flex;
     justify-content: center;
@@ -45,7 +46,8 @@
     height: 100%;
     width:20rem;
     margin-bottom: 0.6rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    position: relative;
 }
 
 .post-container>video{
@@ -54,7 +56,6 @@
     object-fit: contain;
     background-color: lightpink;
     border-radius: 15px;
-    position: relative;
 }
 
 .video-info{
@@ -80,17 +81,12 @@
     width: 20%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
 }
-
-
-
-
-
-
 
 @media screen and (max-width:500px){
     .nav-icons{
         display: none;
     }
-
 }
