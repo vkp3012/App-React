@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background-color:black; */
 }
 
 .navbar{
@@ -54,20 +55,20 @@
     height: 100%;
     width:20rem;
     object-fit: contain;
-    background-color: lightpink;
+    background-color: black;
     border-radius: 15px;
 }
 
-.video-info{
+.videos-info{
     position: absolute;
     width: 20rem;
     display: flex;
     justify-content: space-around;
     bottom: 55px;
-
 }
 
 .avatar-container{
+    /* position: relative; */
     display: flex;
     justify-content: flex-start;
     width: 70%;
@@ -83,6 +84,23 @@
     flex-direction: column;
     justify-content: space-between;
     height: 3rem;
+    /* position: absolute;  */
+}
+
+.modal-container{
+    display: flex;
+    height:100%;
+    width: 100%;
+}
+
+.video-modal{
+    height: 100%;
+    width:50%;
+}
+
+.comments-modal{
+    height: 100%;
+    width:50%;
 }
 
 @media screen and (max-width:500px){

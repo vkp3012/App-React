@@ -18,12 +18,17 @@ import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
+import Link from "next/link"
+const pages = ["Products","Pricing","Blog"];
+const Setting = ["Profile","Logout"]
 
 const ResponsiveAppBar = ({userData}) => {
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const { logout } = React.useContext(AuthContext);
   const router = useRouter();
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -40,7 +45,9 @@ const ResponsiveAppBar = ({userData}) => {
   };
 
   const handleLogout = async () => {
+    console.log("logout called");
     await logout();
+    console.log("logout after");
     router.push('/login');
   }
 
@@ -85,7 +92,7 @@ const ResponsiveAppBar = ({userData}) => {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Remy Sharp"
-                  // src={userData.downloadURL}
+                  src={userData?.downloadURL}
                   sx={{ margin: "0.5rem" }}
                 />
               </IconButton>
@@ -107,7 +114,9 @@ const ResponsiveAppBar = ({userData}) => {
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">Profile</Typography>
+                <Link href = '/profile'>
+                  <Typography textAlign="center">Profile</Typography>
+                </Link>
               </MenuItem>
 
               <MenuItem onClick={() => {

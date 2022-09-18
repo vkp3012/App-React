@@ -8,7 +8,9 @@ import Favourites from './Components/Favourites';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import About from './Components/About';
 import Profile from './Components/Profile';
+
 function App() {
+
   return (
 
     <BrowserRouter>

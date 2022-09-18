@@ -23,11 +23,11 @@ function index() {
   const router = useRouter();
   const { signup, user } = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (user) {
-  //     router.push("/");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+      router.push("/");
+    }
+  }, [user]);
 
   let handleClick = async() => {
     console.log(email);
@@ -71,6 +71,7 @@ function index() {
               password,
               downloadURL,
               uid: userInfo.user.uid,
+              posts:[],
             };
                             // db,collection name, document name
             await setDoc(doc(db, "users", userInfo.user.uid), userData);

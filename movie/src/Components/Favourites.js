@@ -40,7 +40,9 @@ export default class Favourites extends Component {
             10752: "War",
             37: "Western",
         };
+        
         let genreArr = [];
+
         results.map((movieObj) => {
             if (!genreArr.includes(genreId[movieObj.genre_ids[0]])) {
                 genreArr.push(genreId[movieObj.genre_ids[0]]);
