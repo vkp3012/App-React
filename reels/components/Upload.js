@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MovieIcon from "@mui/icons-material/Movie";
 import Alert from "@mui/material/Alert";
 import { v4 as uuidv4 } from "uuid";
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import {arrayUnion, doc, serverTimestamp, setDoc,updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../firebase";
 
@@ -20,7 +20,7 @@ function Upload({userData}) {
     console.log(file);
 
     if (file == null) {
-      setError("file not selected");
+      setError("please select a file");
       setTimeout(() => { 
         setError('')
        }, 2000);
@@ -28,10 +28,10 @@ function Upload({userData}) {
     }
 
     if ((file.size / (1024 * 1024)) > 50) {
-      // setError(`file too large, try uploading a file less than ${fileLimit} MB`);
+      setError("please select a smaller file size");
       setTimeout(() => {
         setError("");
-      }, 4000);
+      }, 2000);
       return;
     }
 
@@ -96,14 +96,14 @@ function Upload({userData}) {
           });
         }
       );
-      console.log("user signed up");
+      console.log("signed up");
     
   }
 
   return (
     <div className="upload-btn">
 
-      {error != '' ?(
+      {error != "" ?(
         <Alert severity="error">{error}</Alert>
       ):(
         <Button

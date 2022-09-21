@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Image from "next/image";
-// import user from "../assets/avatar.png";
+import user from "../assets/avatar.png";
 import { db } from "../firebase";
 import { AuthContext } from "../context/auth";
 
@@ -31,8 +31,8 @@ function Profile() {
 
   useEffect(() => {
     let tempArr = [];
-    postIds.map(uid => {
-      const unsub = onSnapshot(doc(db,"posts",uid),(doc) => {
+    postIds.map(pid => {
+      const unsub = onSnapshot(doc(db,"posts",pid),(doc) => {
         tempArr.push(doc.data());
         setUserPosts([...tempArr]);
         console.log("hello",tempArr);
@@ -50,6 +50,7 @@ function Profile() {
           >
             <Image layout="fill" src={userData.downloadURL} />
           </div>
+          
           <div>
             <h1>{userData.fullName}</h1>
             <h1>Posts:{userData.posts?.length}</h1>

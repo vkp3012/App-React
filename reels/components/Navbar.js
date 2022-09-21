@@ -52,7 +52,7 @@ const ResponsiveAppBar = ({userData}) => {
   }
 
   return (
-    <AppBar position="static" className="navbar">
+    <AppBar position="static" className="navbar" style={{backgroundColor:"white"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -66,8 +66,9 @@ const ResponsiveAppBar = ({userData}) => {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
+              background:"White",
+              color: "inherit",
             }}
           >
             <Image src={insta} width={200} height={55} />

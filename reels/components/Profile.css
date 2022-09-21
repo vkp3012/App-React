@@ -6,7 +6,7 @@
 }
 
 .profile-posts{
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
     display: flex;
@@ -17,9 +17,10 @@
 
 .profile-posts>video{
     border:2px solid black;
-    width:15rem;
-    height: 30rem;
+    width:10rem;
+    height: 20rem;
     padding: 0.5rem;
+    margin: 1rem;
 
 }
 

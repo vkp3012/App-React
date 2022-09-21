@@ -38,13 +38,53 @@ function Feed() {
     }
   },[]);
   
+  const callback = (entries) =>{
+    entries.forEach((entry)=>{
+      let ele = entry.target.childNodes[0];
+
+      console.log(ele);
+
+      ele.play().then(()=>{
+        if(!ele.paused && !entry.isIntersection){
+          console.log("123",entry.isIntersection);
+          ele.pause();
+        }
+      });
+    });
+  };
+
+  let options = {
+    // root: document.querySelector("#scrollArea"),
+    // rootMargin: "0px",
+    threshold:0.6,
+  };
+
+  let observer = new IntersectionObserver(callback,options);
+
+  useEffect(()=>{
+    const elements = document.querySelectorAll(".videos-container")
+    console.log("wow",elements);
+
+    let postContainer = elements[0].childNodes;
+    console.log("timon",postContainer);
+    postContainer.forEach((video)=>{
+      console.log("bye",video.childNodes[0]);
+      observer.observe(video);
+    });
+    return () => {
+      observer.disconnect();
+    }
+  },[posts]);
+
   return (
     <div className="feed-container">
       <Navbar userData={userData} />
       <Upload userData={userData} />
       <div className="videos-container">
         {
-          posts.map((post) => (<Post postData = {post} userData = {userData} /> ))
+          posts.map((post) => (
+            <Post postData = {post} userData = {userData} /> 
+          ))
         }
       </div>
     </div>
