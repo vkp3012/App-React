@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -15,7 +15,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
+// import Buy from './Buy';
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -27,6 +28,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Product() {
     const [value, setValue] = React.useState(2);
+    const [buy,setBuy] = useState([]);
+
+    const handleClick = () =>{
+        setBuy.push([...buy])
+    }
 
     return (
         <div>
@@ -40,7 +46,8 @@ function Product() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        height="540"
+                                        width="10vw"
+                                        height="14vh"
                                         image="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0434%2F0285%2F4564%2Fproducts%2FSide_748811db-ccd1-48c7-9dcd-64ec2ec88993.png%3Fv%3D1623255894&w=1200&q=85"
                                         alt="green iguana"
                                     />
@@ -109,11 +116,17 @@ function Product() {
                             </Box>
 
                             <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', backgroundColor: "blue", margin: "5px" }}>
-                                <Button sx={{ width: '100%', color: "white" }}>Add to cart</Button>
+                                <Button sx={{ width: '100%', color: "white" }} onClick={handleClick}>Add to cart</Button>
                             </Box>
 
                             <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', backgroundColor: "blue", margin: "5px" }}>
-                                <Button sx={{ width: '100%', color: "white" }}>BUY NOW</Button>
+                                <Button sx={{ width: '100%', color: "white" }}>
+                                    <Link to='/buy' style={{
+                                        textDecoration: "none",color:"white"
+                                    }}>
+                                        BUY NOW
+                                    </Link>   
+                                </Button>
                             </Box>
 
                             <div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Login from './Login'
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -53,7 +55,10 @@ function Footer() {
                         <div class="div">Help Center</div>
                         <div class="div">Privacy Policy</div>
                         <div class="div">Terms</div>
+
+                        <Link to="/login" style={{ textDecoration: "none",color:"white" }}>
                         <div class="div">Login</div>
+                        </Link>
                     </div>
                 </div>
                 <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>

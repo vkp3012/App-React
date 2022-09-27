@@ -12,6 +12,8 @@ import Ourproject from './components/Ourproject';
 import Shop from './components/Shop';
 import Contect from './components/Contect';
 import Cart from './components/Cart';
+import Signup from './components/Signup';
+import Buy from './components/Buy';
 
 function App() {
   return (
@@ -47,6 +49,7 @@ function App() {
                 } 
             />
           </Routes>
+
           <Routes>
             <Route path = "/" 
                 element = {                 
@@ -54,10 +57,19 @@ function App() {
                 } 
             />
           </Routes>
+
           <Routes>
             <Route path = "/login" 
                 element = {                 
                   <Login />
+                } 
+            />
+          </Routes>
+
+          <Routes>
+            <Route path = "/Signup" 
+                element = {                 
+                  <Signup />
                 } 
             />
           </Routes>
@@ -74,6 +86,14 @@ function App() {
             <Route path = "/cart" 
                 element = {                 
                     <Cart/>
+                } 
+            />
+          </Routes>
+
+          <Routes>
+            <Route path = "/buy" 
+                element = {                 
+                    <Buy />
                 } 
             />
           </Routes>

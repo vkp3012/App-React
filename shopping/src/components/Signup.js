@@ -2,9 +2,8 @@ import React from 'react'
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
-import Signup from './Signup';
 
-function Login() {
+function Signup() {
   return (
     <div className='login'>
       <img src='https://th.bing.com/th/id/OIP.lLaLjbpQ1y05HaHXHcDeqgHaE8?pid=ImgDet&rs=1' />
@@ -14,7 +13,7 @@ function Login() {
           <div className="login-card">
 
             <h1 class="login-heading">
-              Login
+              Signup
             </h1>
 
             <a class="navbar-brand" href="#">
@@ -31,6 +30,20 @@ function Login() {
             // value={email}
             // onChange={(e) => setEmail(e.target.value)}
             />
+
+            <TextField
+              id="outlined-basic"
+              size="small"
+              label="Full Name"
+              variant="outlined"
+              // fullWidth
+              margin="10px"
+              type="password"
+              padding="10px"
+            // value={password}
+            // onChange={(e) => setPassword(e.target.value)}
+            />
+
             <TextField
               id="outlined-basic"
               size="small"
@@ -44,11 +57,7 @@ function Login() {
             // onChange={(e) => setPassword(e.target.value)}
             />
 
-            <Link href="/Forget">
-              <div style={{ color: "blue", marginTop: "0.5rem" }}>
-                Forget Password{" "}
-              </div>
-            </Link>
+            
 
             <Button
               style={{ marginTop: "0.5rem", width: "10rem" }}
@@ -58,13 +67,13 @@ function Login() {
             // onClick={handleClick}
             // disabled={loading}
             >
-              Log in
+              Signup 
             </Button>
 
             <div className="bottom-card">
-              Do not Have an account ?{" "}
-              <Link to="/Signup">
-                <span style={{ color: "blueviolet" }}>Signup</span>
+              Already Have an account ?{" "}
+              <Link to="/Login">
+                <span style={{ color: "blueviolet" }}>Login</span>
               </Link>
             </div>
           </div>
@@ -72,8 +81,7 @@ function Login() {
         </div>
       </div>
     </div>
-
   )
 }
 
-export default Login
+export default Signup
