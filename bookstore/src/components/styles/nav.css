@@ -1,0 +1,33 @@
+.navbar{
+    width: 100%;
+}
+.container-fluid{
+    margin-left: 12px;
+}
+
+.login-button{
+    color: rgb(29, 29, 30);
+    font-size: 20px;
+    height: 3rem;
+    /* background-color: blue; */
+    width: 5rem;
+}
+
+.login-button :hover {
+    background-color: rgba(204, 9, 9, 0.322);
+    cursor: pointer;
+}
+
+.navbar-collapse{
+    margin: 10px;
+    /* width: 75%; */
+}
+
+.navbar-nav{
+    margin-left: 2%;
+    width: 100%;
+}
+
+.d-flex{
+    width: 100%;
+}
