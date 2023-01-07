@@ -19,9 +19,9 @@ function About() {
                 <h4>Install - Run</h4>
                 <div class="card">
                     <div class="card-body fw-bold text-dark">
-                        git clone https://github.com/nejlasahin/movie-app-with-react.git <br />
+                        git clone https://github.com/vkp3012/App-React/tree/main/movie <br />
                         <br />
-                        $ cd  movie-app-with-react<br />
+                        $ cd  movie<br />
                         <br />
                         $ npm install <br />
                         $ npm start <br />
