@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import login from '../loginpage/login'
+import home from './home'
 import '../styles/nav.css'
 function navbar() {
   return (
@@ -16,7 +17,12 @@ function navbar() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <Link to = '/' style={{ textDecoration: "none",color:"white" }}>
+                                        Home
+                                    <span>{home}</span>
+                                </Link>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">All Book</a>
@@ -44,7 +50,7 @@ function navbar() {
                         <li class="nav-item ">
                             <a class="nav-link active"  href="#" >
                                 <button class='login-button'>
-                                    <Link to = '/login' style={{ textDecoration: "none" }}>
+                                    <Link to = '/login' style={{ textDecoration: "none" ,color:"black"}}>
                                             Login
                                         <span>{login}</span>
                                     </Link>
