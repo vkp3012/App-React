@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(30, 26, 26);
+    color: white;
+    height: 80vh;
+    padding: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 20px;
+}
+
+.content{
+    font-size: 20px;
+    margin-top: 150px;
+}
+
+.avatar{
+    margin: 45px;
+    margin-top: 150px;
+}
+
+.avatar1{
+    border-radius: 50%;
+    margin: 20px;
+}
