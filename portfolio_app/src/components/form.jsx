@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+import {service_id} from "../secrects";
+import {temp} from "../secrects";
+import {public_key} from "../secrects";
 import './styles/form.css'
 
 function form() {
+    const EmailContactForm = () => {
+        const form = useRef();
+        
+        const sendEmail = (e) => {
+        e.preventDefault(); // prevents the page from reloading when you hit “Send”
+        
+        emailjs.sendForm({service_id}, {temp}, form.current, {public_key})
+            .then((result) => {
+                // show the user a success message
+                console.log("send meassage");
+            }, (error) => {
+                // show the user an error
+                console.log(error);
+            });
+        };
+    }
+
   return (
     <div class="form">
             <section class="site-section" >
@@ -13,7 +34,7 @@ function form() {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <form action class="site-form">
+                            <form action class="site-form" ref={form} >
                                 <h3 class="mb">Get In Touch</h3>
                                 <div class="form-group">
                                     <input type="text" class="form-control " placeholder="Your Name" />
@@ -52,7 +73,8 @@ function form() {
                 </div>
             </section>
     </div>
-  )
+    )
 }
 
-export default form
+
+export default form;
