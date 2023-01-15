@@ -12,17 +12,17 @@ function form() {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-7 mb-md-0">
+                        <div class="col">
                             <form action class="site-form">
-                                <h3 class="mb-5">Get In Touch</h3>
+                                <h3 class="mb">Get In Touch</h3>
                                 <div class="form-group">
-                                    <input type="text" class="form-control px-5 py-10" placeholder="Your Name" />
+                                    <input type="text" class="form-control " placeholder="Your Name" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control px-3 py-4" placeholder="Your Email" />
+                                    <input type="text" class="form-control" placeholder="Your Email" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control px-3 py-4" placeholder="Your Phone" />
+                                    <input type="text" class="form-control" placeholder="Your Phone" />
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control" cols="30" rows="5" placeholder="Write a Message"></textarea>
@@ -32,9 +32,9 @@ function form() {
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-5 pl-md-5">
-                            <h3 class="mb-5">My Contact Details</h3>
-                            <ul class="site-contact-details">
+                        <div class="col">
+                            <h3 class="mb">My Contact Details</h3>
+                            <ul class="site-contact-details mb-5">
                                 <li>
                                     <span class="text-uppercase">Email</span><br/>
                                     vivekece19@gmail.com
