@@ -3,9 +3,10 @@ import React from 'react'
 import './styles/navbar.css'
 import { Link } from "react-router-dom"
 import logo from './images/Vivek Patel-logos_white2.png'
-import Education from './education'
+import education from './education'
 import Header from './header'
 import project from './project'
+
 function navbar() {
   return (
     <div>
@@ -26,8 +27,8 @@ function navbar() {
                 </div>
                 <div class="nav1">
                   <Link to="/education" style={{textDecoration:"none",color:"White",display:"inline"}}>
-                    Education
-                    <span>{Education}</span>
+                      Education
+                    <span>{education}</span>
                   </Link>
                 </div>
                 <div class="nav1">
@@ -36,7 +37,7 @@ function navbar() {
                       <span>{project}</span>
                     </Link>
                 </div>
-                <div class="nav1">Contect</div>
+                <div class="nav1">Blog</div>
             </div>
         </navbar>
     </div>

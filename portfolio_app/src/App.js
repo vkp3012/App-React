@@ -13,10 +13,9 @@ function App() {
         <Navbar/>
       <Routes>
         <Route path='/' element={<Header/>}/>
-        <Route path='/education' element={<Education/>}/>
         <Route path='/project' element={<Project/>}/>
+        <Route path='/education' element={<Education/>}/>
         <Route path='/form' element={<Form/>}/>
-        {/* <Route path='/' element={<Header/>}/> */}
       </Routes>
         <Footer/>
     </div>
