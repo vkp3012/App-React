@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import avatar from './images/avatar.png'
+// import avatar from './images/avatar.png'
 import './styles/header.css'
 import Form from './form'
 import name from './images/Vivek Patel-logos_black.png'
@@ -11,11 +11,11 @@ function Header() {
           <header>
               <div class="content">
                       <h2>Hello I'm <h1>Vivek Kumar Patel.</h1></h2><br/>
-                      <p class="content1">A Web Developer activelly looking for a new possition. <br/>I love to explore new technologies and always try to enhance my skills through develop some projects.</p>
+                      <p class="content1">A Web Developer activelly looking <br/> for a new possition. I love to explore <br/>new technologies and always try to<br/> enhance my skills through develop<br/> some projects.</p>
               </div>
-              <div class='avatar' >
+              {/* <div class='avatar' >
                   <img src={avatar} class='avatar1'></img>
-              </div>
+              </div> */}
           </header>
           <div class="container">
         <div class="row mb-5 align-items-center">

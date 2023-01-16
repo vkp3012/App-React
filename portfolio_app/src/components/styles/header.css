@@ -6,19 +6,22 @@
 
 header{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: rgb(30, 26, 26);
-    color: white;
+    background-image: url('../images/web.jpg');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    color: rgb(252, 251, 251);
     height: 100vh;
     padding: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 20px;
 }
 
 .content{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: column;
     font-size: 20px;
-    margin-top: 150px;
+    margin-right: 92px;
 }
 
 .avatar{

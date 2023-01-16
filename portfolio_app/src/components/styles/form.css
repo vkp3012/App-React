@@ -1,33 +1,11 @@
 * {
     box-sizing: border-box;
 }
-/* 
-.section-heading{
-    font-size: 20px;
-    padding: 20px;
-} */
 
 .row{
-    /* display: flex;
-    justify-content: space-evenly; */
-    /* width: 100%;
-    height: 70vh;
-    padding: 20px; */
     font-size: 25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-/* .mb{
-    padding: 10px;
-    margin: 10px;
-} */
-
-/* .site-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
-} */
 
 input[type = text] {
     padding: 15px 20px;
