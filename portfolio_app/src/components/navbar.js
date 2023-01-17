@@ -6,15 +6,15 @@ import logo from './images/Vivek Patel-logos_white2.png'
 import education from './education'
 import Header from './header'
 import project from './project'
+import form from './form'
 
 function navbar() {
   return (
     <div>
         <navbar>
             <div class = 'logo'>
-              <img src={logo} />
                   <Link to="/" style={{textDecoration:"none",color:"White",display:"inline"}}>
-                          
+                    <img src={logo} /> 
                         <span>{Header}</span>
                   </Link>
               </div>
@@ -38,6 +38,12 @@ function navbar() {
                     </Link>
                 </div>
                 <div class="nav1">Blog</div>
+                <div class="nav1">
+                  <Link to="/form" style={{textDecoration:"none",color:"White",display:"inline"}}>
+                        Contect
+                      <span>{form}</span>
+                    </Link>
+                </div>
             </div>
         </navbar>
     </div>
