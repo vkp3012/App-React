@@ -4,27 +4,67 @@
     padding: 0;
 }
 
-.form-section{
+.styledContactForm{
     width: 100%;
-    height: auto;
-    padding: 65px;
-    /* margin-left: 10px; */
-}
-.row{
-    font-size: 25px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:85px;
+    height: 88vh;
+    display: flex;
 }
 
-input[type = text] {
+form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+input[type = "text"] {
     padding: 15px 20px;
     margin: 8px 0;
     box-sizing: border-box;
 }
 
+input[type = "email"] {
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 2px solid rgba(0, 206, 158, 1);
+}
+
+input[type="submit"] {
+    margin-top: 2rem;
+    margin-left: 12rem;
+    cursor: pointer;
+    background: rgb(249, 105, 14);
+    color: white;
+    border: none;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: green;
+}
+
 textarea{
     resize: none;
     display:block;
-    width:200%;
+    width:100%;
     font-size:18px;
     height: 150px;
     padding: 12px 20px;
@@ -34,40 +74,34 @@ textarea{
     background-color: #f8f8f8;
 }
 
-.btn{
-    color: rgb(247, 242, 242);
-    background-color:blue;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 4%;
-    border: none;
-    align-items: center;
-    margin: 5px;
-    float: right;
+textarea:focus {
+    border: 2px solid rgb(0, 0, 206);
 }
 
-.btn:hover{
-    cursor: pointer;
-    background-color: green;
+
+.col{
+    padding-left: 200px;
+}
+
+.site-contact-details{
+    padding: 20px;
+    list-style-type: none;
+}
+
+.mb{
+    font-size: 30px;
 }
 
 ul li{
-    list-style-type: none;
-    margin: 5px;
-    padding: 20px;
-    /* justify-content: center; */
-    align-items: center;
-    float:right;
+    color: rgb(19, 20, 20);
+    padding: 10px;
 }
 
 .text-uppercase{
-    font-size: 25px;
-    margin-right:20px 70px;
-    padding: 200px;
-    font-style: bold;
+    font-size: 35px;
+    font-weight: 500;
+    padding: 50px;
 }
 
-span{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 

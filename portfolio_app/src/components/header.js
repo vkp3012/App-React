@@ -47,7 +47,7 @@ function Header() {
                     </Link>
                 </a>
                 <a
-                  href="#s"
+                  href="https://drive.google.com/file/d/1DWEG4xb_DakS6EXtLTZVN86jylctulBR/view"
                   class="btn btn-secondary px-4 py-2 btn-sm"
                   target="_blank"
                   rel="noopener noreferrer"
