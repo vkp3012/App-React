@@ -43,3 +43,52 @@
 
 /* header-page */
 
+.content{
+    background-image: url('../images/sodapdf-converted.gif');
+    background-repeat: no-repeat;
+    height: 59vh;
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content1{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    padding: 130px 50px;
+    color: white;
+    position: absolute;
+}
+
+.content2{
+    display: flex;
+    justify-content: space-evenly;
+    flex: row;
+    padding: 5px 50px;
+}
+
+.content-2{
+    padding: 10px 100px;
+}
+
+.mb{
+    padding: 30px 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-1{
+    padding: 20px;
+}
+
+.btn{
+    align-items: center;
+    background-color: blue;
+    width: 15%;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+}
+
