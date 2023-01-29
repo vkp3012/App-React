@@ -42,9 +42,6 @@ function navbar() {
                 </Link>
             </div>
 
-
-            <div class="nav1">Blog</div>
-
             <div class="nav1">
                 <Link to="/form" style={{textDecoration:"none"}} class="nav-heading">
                     Contect

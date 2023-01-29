@@ -27,7 +27,7 @@ function project() {
                   <div class="project-btn">
                     <p class="btn">
                         <a
-                            href="https://ajayfood.onrender.com/"
+                            href="https://ajayfood.onrender.com//"
                             class="btn-1"
                             target="_blank"
                             rel="noopener noreferrer"
