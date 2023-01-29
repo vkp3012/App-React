@@ -92,3 +92,49 @@
     width: 120px;
 }
 
+
+/* footer-page */
+.footer{
+    display: flex;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.site-contact-details{
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px 0;
+}
+
+.logo-footer-1{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px 0;
+}
+
+.footer-details{
+    color: white;
+    font-weight: 500;
+}
+
+footer{
+    color: white;
+    padding: 0 0 20px;
+}
+
