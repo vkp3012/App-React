@@ -1,103 +1,26 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@media screen and (min-width:300px) and (max-width:700px) {
+    .resume{
+        display: flex;
+        flex-direction: column;
+    }
 
-.resume{
-    width:100%;
-    animation: progress 1000ms ease-in 1;
-}
+    .resume-0{
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
 
-.resume-section-1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 99%;
-}
+    .resume-1{
+        /* display: flex; */
+        flex-wrap: wrap;
+        flex-direction: colume;
+        justify-content: center;
+        align-items: baseline;
+        
+    }
 
-.edu-detailes{
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    width: 90%;
-    margin-left: 20px;
-    display:block;
-}
-
-.exp-detailes{
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-right: 10px;
-    width: 90%; 
-}
-
-p{
-    font-size: 15px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.section-2{
-    display: flex;
-    padding: 20px 20px;
-}
-
-.skill-detailes{
-    width: 80%;
-}
-
-.container-1{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 5px;
-}
-
-.container {
-    background-color: rgb(192, 192, 192);
-    width: 50%;
-    border-radius: 15px;
-}
-
-.skill {
-    background-color: rgb(116, 194, 92);
-    color: white;
-    text-align: right;
-    font-size: 15px;
-    border-radius: 15px;
-}
-
-.html {
-    width: 90%;
-}
-
-.css {
-    width: 80%;
-}
-
-.node{
-    width:70%
-}
-
-.react{
-    width:70%;
-}
-
-.bs{
-    width:70%;
-}
-
-.percentage {
-    display: block;
-    height: 100%;
-    background-color: orange;
-    border-radius: 5px;
-    animation: progress 2500ms ease-in 1;
-}
-
-@keyframes progress {
-    from {
-        width: 0;
+    .col-6{
+        display: flex;
+        flex-direction: row;
     }
 }
