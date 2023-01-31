@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import emailjs from "@emailjs/browser";
-import {service_id,temp,public_key}from '../../secrects'
+import {service_id,temp,public_key} from '../../secrets'
 import './form.css';
 
 const Form = () => {
