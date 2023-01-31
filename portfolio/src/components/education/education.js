@@ -12,10 +12,8 @@ function education() {
         <div class="resume-0 d-flex flex-row col-12 p-2">
           <div class="resume-1 col-6">
             <h2><strong>Eduction</strong></h2>
-            <div class="p-3 bg-secondary">
-              <span>
+            <div class="p-1 bg-secondary">
                 <i class="fa fa-calendar" aria-hidden="true"></i> August 2015 - 2019 May
-              </span>
               <h3>Bachelor of Electronics and Communication Engineering</h3>
               <p> 
                 I completed studies in Electronics and Communication
@@ -52,31 +50,31 @@ function education() {
           <hr/>
         </div>
             <div class="col-10 p-4">
-              <div class="d-flex col-10">
-                <h5 >HTML</h5>
-                <div class="progress m-1 col-12" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
+              <div class="d-flex justify-content-between col-10 m-2">
+                <h5> HTML</h5>
+                <div class="progress m-1 col-10" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
                   <div class="progress-bar" style={{width: "95%"}}>Html</div>
                 </div>
               </div>
-              <div class="d-flex col-12">
+              <div class="d-flex justify-content-between col-10 m-2">
                 <h5 >CSS</h5>
                 <div class="progress m-1 col-10" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
                   <div class="progress-bar" style={{width: "90%"}}>CSS</div>
                 </div>
               </div>
-              <div class="d-flex col-12">
+              <div class="d-flex justify-content-between col-10 m-2">
                 <h5 >Node JS</h5>
                 <div class="progress m-1 col-10" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
                   <div class="progress-bar" style={{width: "70%"}}>Node JS</div>
                 </div>
               </div>
-              <div class="d-flex col-12">
+              <div class="d-flex justify-content-between col-10 m-2">
                 <h5 >React</h5>
                 <div class="progress m-1 col-10" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
                   <div class="progress-bar" style={{width: "70%"}}>React</div>
                 </div>
               </div>
-              <div class="d-flex col-12">
+              <div class="d-flex justify-content-between col-10 m-2">
                 <h5 >BootStrap</h5>
                 <div class="progress m-1 col-10" role="progressbar" aria-label="Basic example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">  
                   <div class="progress-bar" style={{width: "75%"}}>BootStrap</div>
