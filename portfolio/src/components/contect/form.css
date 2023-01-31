@@ -49,7 +49,7 @@ input:focus {
 
 input[type="submit"] {
     margin-top: 2rem;
-    margin-left: 20rem;
+    margin-left: 25rem;
     background: rgb(249, 105, 14);
     color: white;
     border: none;

@@ -31,7 +31,7 @@ const Form = () => {
 
   return (
     <div class="contect col-12 mt-5">
-        <div class="contect-form col-5 p-1">
+        <div class="contect-form col-5 p-1 m-1">
           <h1>Wanna Start Work With Me?</h1>
           <hr/>
           <form ref={form} onSubmit={sendEmail} class="form">
@@ -54,7 +54,7 @@ const Form = () => {
               <label>Message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </label>
                 <textarea name="message" />
-              <input type="submit" value="Send"  class="btn"/>
+              <input type="submit" value="Send"/>
           </form>
         </div>
       <div class="contect-detalies col-5 p-2">
