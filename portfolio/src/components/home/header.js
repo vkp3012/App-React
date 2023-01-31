@@ -9,7 +9,7 @@ function header() {
       <div class="content">
         <div class="content1">
           <h2>Hello ✋ I'm, <h1 class="name">Vivek Kumar Patel.<hr/></h1></h2><br/>
-          <p class="content-1">
+          <p class="content-1 mb-1">
             "A Web Developer activelly looking for a new possition. I love to explore<br/>
             new technologies and always try to enhance my skills through develop<br/> 
             some projects.I am a passionate Full Stake Software developer and <br/> 
@@ -27,7 +27,7 @@ function header() {
               About <strong>Me</strong><hr/>
             </h2>
           </div>
-          <p class="mb">
+          <p class="mb-1">
             I am a passionate Full Stake Software developer and I interested
             to study updated technologies and tackle complex problems. I
             completed my Bachelors in Electronics and Communication Engineering. My
@@ -35,7 +35,7 @@ function header() {
             growth of the organization as well as myself.
           </p>
             <div class="d-grid gap-2 d-md-block">
-              <button class="btn btn-primary" type="button">
+              <button class="btn btn-primary m-2" type="button">
                 <a
                   href='../contect/form.js'
                   style={{textDecoration:"none",display:"inline", color:"white"}}
@@ -46,11 +46,11 @@ function header() {
                   </Link>
                 </a>
               </button>
-              <button class="btn btn-primary" type="button">
+              <button class="btn btn-primary m-2" type="button">
                 <a
                   href="https://drive.google.com/file/d/1DWEG4xb_DakS6EXtLTZVN86jylctulBR/view"
                   rel="noopener noreferrer"
-                  style={{textDecoration:"none",display:"inline", color:"white",width:"40%"}}
+                  style={{textDecoration:"none",display:"inline", color:"white",width:"60%"}}
                 >
                   Download CV <i class="fa fa-download" aria-hidden="true"></i>
                 </a>
