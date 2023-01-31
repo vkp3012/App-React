@@ -30,8 +30,8 @@ const Form = () => {
     };
 
   return (
-    <div class="contect">
-        <div class="contect-form">
+    <div class="contect col-12 mt-5">
+        <div class="contect-form col-5 p-1">
           <h1>Wanna Start Work With Me?</h1>
           <hr/>
           <form ref={form} onSubmit={sendEmail} class="form">
@@ -54,13 +54,13 @@ const Form = () => {
               <label>Message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </label>
                 <textarea name="message" />
-              <input type="submit" value="Send" />
+              <input type="submit" value="Send"  class="btn"/>
           </form>
         </div>
-      <div class="contect-detalies">
+      <div class="contect-detalies col-5 p-2">
       <h3 class="mb-2">My Contact Details</h3>
       <hr/>
-        <ul class="site-contact-details" style={{color:"black",padding:"20px 0"}}>
+        <ul class="site-contact-details p-1 text-dark">
             <li>
               <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp; vivekece19@gmail.com</span>
             </li>
@@ -74,9 +74,9 @@ const Form = () => {
             </li>
         </ul>
 
-      <h3 class="mb-2">Social Media</h3>
+      <h3 class="m-1 p-1">Social Media</h3>
       <hr/>
-      <p class="social-media" style={{padding:"20px 10px"}}>
+      <p class="social-media d-flex-col align-content-lg-start">
         <p class="logo-hover"><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp; Instagram</p>
         <p class="logo-hover"><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;&nbsp;LinkedIn</p>
         <p class="logo-hover"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp; GitHub</p>
