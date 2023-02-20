@@ -5,13 +5,14 @@ const Header = () => {
         <>
             <nav className='navbar navbar-expand-lg'>
                 <div className='row container-fluid'>
-                    <div className='col-4 px-5 d-flex algin-items-center'>
+                    <div className='col-4 px-2 d-flex algin-items-center'>
                         <div className=' d-flex align-items-center p-md-3'>
                             <Link
                                 to ="/"
                                 className='text-white d-flex'
                             >
-                                <h4 style={{color:"white"}}>Vivek</h4><h4 style={{color:"red"}}>Patel</h4>
+                                <button style={{background:"red" ,color:"white",padding:"10px",borderRadius:"50%",fontFamily:"revert-layer",fontSize:"20px",paddingRight:"10px"}}>VP</button>
+                                <h4 style={{color:"white",paddingTop:"10px"}}>Vivek</h4><h4 style={{color:"red",paddingTop:"10px"}}>Patel</h4>
                             </Link>
                         </div>
                     </div>

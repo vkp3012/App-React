@@ -36,3 +36,12 @@ li{
 .navbar{
   background-color: var(--color-131921);
 }
+
+.footer-wrapper{
+  background-color: var(--color-131921);
+}
+
+.footer-wrapper-1{
+  background-color: #232f3e;
+}
+
