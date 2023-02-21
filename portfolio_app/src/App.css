@@ -133,7 +133,7 @@ button:hover{
 /* Home */
 
 .home-wrapper{
-  background-color: var(--color-777777);
+  background-color: var(--color-ededed);
 }
 
 footer:not(:first-child) {

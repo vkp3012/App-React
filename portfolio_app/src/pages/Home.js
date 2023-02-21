@@ -11,7 +11,7 @@ const Home = () => {
                     <div className='row'>
                         <div className='col-6'>
                             <div>
-                                <div className='d-flex align-items-center container-xxl justify-content-center text-white'>
+                                <div className='d-flex align-items-center container-xxl justify-content-center fst-italic'>
                                     <h1 className='ps-4 fs-1'>Hello ✋ I'm,<br/> <strong>Vivek Kumar Patel</strong>.</h1>
                                 </div>
                                 <hr/>
@@ -42,7 +42,7 @@ const Home = () => {
                     <div className='row'>
                         <div className='col-4'>
                             <div>
-                                <strong className='fs-1 text-white'>VIVEK</strong>
+                                <strong className='fs-1'>VIVEK</strong>
                             </div>
                             <div className='text-scondary fs-1'>
                                 <strong className='fs-1' style={{color:"red"}}>PATEL</strong>
@@ -51,12 +51,12 @@ const Home = () => {
 
                         <div className='col-8'>
                             <div className='container-xxl d-flex-row justify-content-center align-items-center'>
-                                <div className='d-flex justify-content-center align-items-center text-white'>
+                                <div className='d-flex justify-content-center align-items-center'>
                                     <h1>About Me</h1>
                                 </div>
                                 <hr/>
                                 <div>
-                                    <p className='w-100 fs-4 fst-italic p-4 text-white'>
+                                    <p className='w-100 fs-4 fst-italic p-4'>
                                         I am a passionate Full Stake Software developer and I interested to study updated technologies and tackle complex problems. I completed my Bachelors in Electronics and Communication Engineering. My technical and management skills which will use to support the growth of the organization as well as myself.
                                     </p>
                                 </div>

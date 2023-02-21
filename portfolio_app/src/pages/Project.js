@@ -34,7 +34,7 @@ const Project = () => {
                     </a>
                   </button>
                   <button className='button gap-30'>
-                  <a href="https://movieapp-2023.vercel.app/">
+                  <a href="">
                       GitHub Link
                     </a>
                   </button>
@@ -62,9 +62,17 @@ const Project = () => {
                   </p>
                 </div>
                 <div className='d-flex justify-content-center align-items-center gap-30 py-3'>
-                                    <button className='button gap-30'>HIRE ME</button>
-                                    <button className='button gap-30'>DOWNLOAD CV</button>
-                                </div>
+                  <button className='button gap-30'>
+                    <a href="https://ajayfood.onrender.com//">
+                      WebSite Link
+                    </a>
+                  </button>
+                  <button className='button gap-30'>
+                  <a href="https://github.com/vkp3012/backend">
+                      GitHub Link
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -88,9 +96,17 @@ const Project = () => {
                   </p>
                 </div>
                 <div className='d-flex justify-content-center align-items-center gap-30 py-3'>
-                                    <button className='button gap-30'>HIRE ME</button>
-                                    <button className='button gap-30'>DOWNLOAD CV</button>
-                                </div>
+                  <button className='button gap-30'>
+                    <a href="https://ecommerce-app-lac.vercel.app/contact">
+                      WebSite Link
+                    </a>
+                  </button>
+                  <button className='button gap-30'>
+                  <a href="">
+                      GitHub Link
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
