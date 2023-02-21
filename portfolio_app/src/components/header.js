@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import ThemeMenu from './ThemeMenu'
 const Header = () => {
     return (
         <>
@@ -72,6 +73,9 @@ const Header = () => {
                                         >
                                             <p className='mb-0'>About</p>
                                         </Link>
+                                </li>
+                                <li className='nav-item'>
+                                    <ThemeMenu/>
                                 </li>
                             </ul>    
                         </div>
