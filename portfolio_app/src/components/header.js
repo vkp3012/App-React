@@ -5,15 +5,15 @@ const Header = () => {
     return (
         <>
             <nav className='navbar navbar-expand-lg'>
-                <div className='row container-fluid'>
-                    <div className='col-4 px-2 d-flex algin-items-center'>
+                <div className='row container-xxl'>
+                    <div className='container-xxl col-4 px-2 d-flex algin-items-center'>
                         <div className=' d-flex align-items-center p-md-3'>
                             <Link
                                 to ="/"
                                 className='text-white d-flex'
                             >
                                 <button style={{background:"red" ,color:"white",padding:"10px",borderRadius:"50%",fontFamily:"revert-layer",fontSize:"20px",paddingRight:"10px"}}>VP</button>
-                                <h4 style={{color:"white",paddingTop:"10px"}}>Vivek</h4><h4 style={{color:"red",paddingTop:"10px"}}>Patel</h4>
+                                <h4 style={{color:"white",paddingTop:"10px"}} className="fs-2">Vivek</h4><h4 style={{color:"red",paddingTop:"10px"}} className="fs-2">Patel</h4>
                             </Link>
                         </div>
                     </div>
@@ -30,9 +30,9 @@ const Header = () => {
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div className='col-7 collapse navbar-collapse' id="navbarSupportedContent">
+                    <div className='container-xxl col-7 collapse navbar-collapse' id="navbarSupportedContent">
                         <div>
-                            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+                            <ul className='navbar-nav me-auto mb-2 mb-lg-0 fs-4'>
                                 <li className='nav-item'>
                                     <Link
                                         to ="/"

@@ -32,6 +32,23 @@ li{
   padding-left: 20px;
 }
 
+.button {
+  background-color: var(--color-232f3e);
+  color: white;
+  font-size: 14px;
+  padding: 13px 33px;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: var(--color-febd69);
+  color: #131921;
+}
+
+.gap-30{
+  gap: 30px;
+}
+
 /* navbar */
 .navbar{
   background-color: var(--color-131921);
@@ -106,5 +123,19 @@ li{
 
 .mode-list__color.active > i {
   transform: scale(1);
+}
+
+/* Home */
+
+.home-wrapper{
+  background-color: var(--color-777777);
+}
+
+footer:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-wrapper:not(:first-child) {
+  border-top: 3px solid rgba(18, 17, 17, 0.1);
 }
 
