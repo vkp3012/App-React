@@ -22,6 +22,7 @@ body {
 
 a{
   text-decoration: none;
+  color: white;
 }
 
 .gap-30{
@@ -43,6 +44,10 @@ li{
 .button:hover {
   background-color: var(--color-febd69);
   color: #131921;
+}
+
+button:hover{
+  color: #131921
 }
 
 .gap-30{
