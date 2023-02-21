@@ -1,9 +1,11 @@
 import React from 'react'
 import Name  from "../assets/images/logo.png";
+import Meta from '../components/Meta';
 
 const Home = () => {
     return ( 
         <>
+            <Meta title={"Vivek Patel"} />
             <div className='home-wrapper'>
                 <div className='container-xxl pt-5'>
                     <div className='row'>
