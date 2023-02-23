@@ -11,11 +11,11 @@ const Project = () => {
       <BreadCrummb title="Project" />
       <div className='project-wrapper home-wrapper'>
         <div className='container-xxl pt-4 py-4'>
-          <div className='row'>
-            <div className='col-3'>
+          <div className='row footer-detailes'>
+            <div className='col-3 detailes'>
               <img src={Movie} alt='movie' style={{maxWidth:"100%",height:"100%"}}/>
             </div>
-            <div className='col-9'>
+            <div className='col-9 detailes'>
               <div class="card text-white bg-dark mb-3" style={{maxWidth:"100%"}}>
                 <div class="card-header">MovieFlex</div>
                 <div class="card-body">
@@ -34,7 +34,7 @@ const Project = () => {
                     </a>
                   </button>
                   <button className='button gap-30'>
-                  <a href="">
+                  <a href="#git">
                       GitHub Link
                     </a>
                   </button>
@@ -46,11 +46,11 @@ const Project = () => {
       </div>
       <div className='project-wrapper home-wrapper'>
         <div className='container-xxl pt-4 py-4'>
-          <div className='row'>
-            <div className='col-3'>
+          <div className='row footer-detailes'>
+            <div className='col-3 detailes'>
               <img src={Food} alt='movie' style={{maxWidth:"100%" ,height:"100%"}}/>
             </div>
-            <div className='col-9'>
+            <div className='col-9 detailes'>
               <div class="card text-white bg-dark mb-3" style={{maxWidth:"100%"}}>
                 <div class="card-header">Food</div>
                 <div class="card-body">
@@ -80,11 +80,11 @@ const Project = () => {
       </div>
       <div className='project-wrapper home-wrapper'>
         <div className='container-xxl pt-4 py-4'>
-          <div className='row'>
-            <div className='col-3'>
+          <div className='row footer-detailes'>
+            <div className='col-3 detailes'>
               <img src={Movie} alt='movie' style={{maxWidth:"100%" ,height:"100%"}}/>
             </div>
-            <div className='col-9'>
+            <div className='col-9 detailes'>
               <div class="card text-white bg-dark mb-3" style={{maxWidth:"100%"}}>
                 <div class="card-header">Ecommerce</div>
                 <div class="card-body">
@@ -102,7 +102,7 @@ const Project = () => {
                     </a>
                   </button>
                   <button className='button gap-30'>
-                  <a href="">
+                  <a href="#git">
                       GitHub Link
                     </a>
                   </button>

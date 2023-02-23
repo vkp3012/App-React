@@ -59,8 +59,8 @@ const Contact = () => {
 
       <div className='contect-wrapper home-wrapper'>
         <div className='container-xxl'>
-          <div className='row'>
-            <div className='col-6'>
+          <div className='row footer-detailes'>
+            <div className='col-6 detailes'>
               <div className='d-flex-col align-contect-center justify-content-center py-4'>
                 <h3 className=''>Message Me</h3>
                 <form action className='d-flex flex-column gap-15' ref={form} onSubmit={sendEmail}>
@@ -87,7 +87,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <div className='col-6'>
+            <div className='col-6 detailes'>
               <div>
                 <h3 class="contect-title mb-4 text-center">Get in Touch With us</h3>
                 <div className='text-center ps-5'>

@@ -22,6 +22,7 @@ body {
 
 a{
   text-decoration: none;
+  color: white;
 }
 
 .gap-30{
@@ -37,6 +38,14 @@ li{
   color: white;
   font-size: 14px;
   padding: 13px 33px;
+  border-radius: 25px;
+}
+
+.button1 {
+  background-color: var(--color-232f3e);
+  color: white;
+  font-size: 14px;
+  padding: 13px 0;
   border-radius: 25px;
 }
 
@@ -60,6 +69,7 @@ button:hover{
 a:hover{
   color:black;
 }
+
 /* navbar */
 .navbar{
   background-color: var(--color-131921);
@@ -142,8 +152,151 @@ a:hover{
   background-color: var(--color-ededed);
 }
 
+img{
+  width: 25rem;
+  height: 35rem;
+  background-color: transparent;
+}
+
+.logo{
+  font-size: 5rem;
+  text-decoration-line:inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background{
+  background-image: url("../src/assets/images/IMG_20211118_062452_597.jpg");
+  background-size:100%;
+  background-position-y: -700px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+
+.header_style{
+  font-family: 'Babylonica', cursive;
+  font-weight: 60rem;
+  font-size: 70px;
+}
+
+/* footer */
+.footer-wrapper{
+  background-color: var(--color-131921);
+}
+
+.footer-wrapper-1{
+  background-color: #232f3e;
+}
+
 footer:not(:first-child) {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (min-width:300px) and (max-width:1000px) {
+  .footer-detailes{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .float-end{
+    width: 5rem;
+    height: 5rem;
+    display: none;
+    justify-content: flex-end;
+    columns: 12;
+  }
+
+  .header-detailes{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: fit-content;
+    font-size: 12px;
+  }
+
+  .detailes{
+    display: contents;
+    columns: 12;
+    width: 100%;
+  }
+
+  .edu-detailes-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: 12px;
+  }
+
+  nav{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .progress{
+    display: contents;
+    width: 100%;
+  }
+
+  .progress-bar{
+    display: flex;
+    columns: 12;
+    width: 100%;
+  }
+
+  .detailes-1{
+    display: flex;
+    flex-direction: row-reverse;
+    columns: 10;
+    width: 100%;
+  }
+
+  .nav-1{
+    margin: 0 -26px 0;
+  }
+
+  .name_logo{
+    margin: 0 124px 0;
+  }
+
+  .header_style{
+    font-family: 'Babylonica', cursive;
+    font-weight: 60rem;
+    font-size: 50px;
+  }
+
+  .background{
+    height: 100vh;
+  }
+
+}
+
+@media screen and (min-width:700px){
+  .header-detailes{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    font-size: 5px;
+  }
+
+  .header_style{
+    font-family: 'Babylonica', cursive;
+    font-weight: 60rem;
+    font-size: 50px;
+  }
+
+  .background{
+    height: 100vh;
+  }
+
 }
 
 

@@ -20,36 +20,34 @@ const Footer = () => {
           </div>
       </footer>
 
-      <footer className='footer-wrapper '>
+      <footer className='footer-wrapper'>
       <div className='container-xxl d-flex flex-row p-3'> 
-          <div className='col-3'>
+        <div className='row footer-detailes'>
+          <div className='col-3 footer-detailes'>
             <h4 className='text-white mb-4'>Information</h4>
             <div className='text-white footer-link d-flex flex-column'>
-              <a href='#' alt="linkedin" className="text-white py-2 mb-1">Privacy Policy</a>
-              <a href='#' alt="github" className="text-white py-2 mb-1">Blogs</a>
-              <a href='#' alt="twitter" className="text-white py-2 mb-1">Term and Condition</a>
+              <a href='#pp' alt="linkedin" className="text-white py-2 mb-1">Privacy Policy</a>
+              <a href='#b' alt="github" className="text-white py-2 mb-1">Blogs</a>
+              <a href='#TAC' alt="twitter" className="text-white py-2 mb-1">Term and Condition</a>
             </div>
           </div>
-
-          <div className='col-3'>
+          <div className='col-3 footer-detailes'>
             <h4 className='text-white mb-4'>Account</h4>
             <div className='footer-link d-flex flex-column'>
                 <Link className='text-white py-2 mb-1' to="/about" >About Us</Link>
                 <Link className='text-white py-2 mb-1'>Faq</Link>
                 <Link className='text-white py-2 mb-1' to="/contact" >Contact</Link>
             </div>
-        </div>
-
-          <div className='col-3'>
+          </div>
+          <div className='col-3 footer-detailes'>
             <h4 className='text-white mb-4'>Social Media</h4>
             <div className='footer-link d-flex flex-column text-white'>
-              <a href='#' alt="linkedin" className="text-white py-2 mb-1"><BsLinkedin/>&nbsp;&nbsp;Linkedin</a>
-              <a href='#' alt="github"className="text-white py-2 mb-1"><BsGithub/>&nbsp;&nbsp;GitHub</a>
-              <a href='#' alt="twitter" className="text-white py-2 mb-1"><BsTwitter/>&nbsp;&nbsp;Twitter</a>
+              <a href='#linkdine' alt="linkedin" className="text-white py-2 mb-1"><BsLinkedin/>&nbsp;&nbsp;Linkedin</a>
+              <a href='#github' alt="github"className="text-white py-2 mb-1"><BsGithub/>&nbsp;&nbsp;GitHub</a>
+              <a href='#twitter' alt="twitter" className="text-white py-2 mb-1"><BsTwitter/>&nbsp;&nbsp;Twitter</a>
             </div>
           </div>
-
-          <div className='col-3'>
+          <div className='col-3 footer-detailes'>
           <h4 className = "text-white mb-4">Contact Us</h4>
             <div className='footer-link d-flex flex-column'>
                 <address className='text-white fs-6 flex-wrap py-2 mb-1'>
@@ -73,6 +71,7 @@ const Footer = () => {
                 </a>
               </div>
           </div>
+        </div>
       </div>
       </footer>
 
