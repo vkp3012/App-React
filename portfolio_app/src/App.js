@@ -8,21 +8,18 @@ import Project from './pages/Project';
 import Contact from './pages/Contact';
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path = "/" element = {<Layout/>}>
-            <Route index element = {<Home/>} />
-            <Route path = "/education" element ={ <Education />} />
-            <Route path = "/contact" element ={ <Contact />} />
-            <Route path = "/about" element ={ <About />} />
-            <Route path = "/project" element ={ <Project />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path = "/" element = {<Layout/>}>
+          <Route index element = {<Home/>} />
+          <Route path = "/education" element ={ <Education />} />
+          <Route path = "/contact" element ={ <Contact />} />
+          <Route path = "/about" element ={ <About />} />
+          <Route path = "/project" element ={ <Project />} />
+        </Route>
+      </Routes>                    
+    </BrowserRouter>
   );
 }
 

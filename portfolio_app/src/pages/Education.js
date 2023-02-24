@@ -4,9 +4,8 @@ import BreadCrumb from '../components/BreadCrumb'
 const Education = () => {
   return (
     <>
-      <Meta title={"Eduction"} />
-      <BreadCrumb title="Eduction" />
-
+      <Meta title={"Eduction"}  />
+      <BreadCrumb title="Eduction" className="breadcrumb"/>
       <div className='edu-wrapper home-wrapper mb-0'>
         <div className='container-xxl'>
           <div className='row'>
@@ -25,7 +24,7 @@ const Education = () => {
           <div className='row edu-detailes-1'>
             <div className='col-6 detailes'>
               <div className='text-center mb-0'>
-                <p className='fs-1'><strong>Eduction</strong></p>
+                <p className='fs-1'><strong>Education</strong></p>
                 <hr />
               </div>
 

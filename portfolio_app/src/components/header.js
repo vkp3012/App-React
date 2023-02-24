@@ -1,13 +1,14 @@
+/* eslint-disable no-template-curly-in-string */
 import React from 'react'
 import { Link } from "react-router-dom"
-import ThemeMenu from './ThemeMenu'
-const Header = () => {
+
+const Header = () => {  
     return (
         <>
-            <nav className='navbar navbar-expand-lg'>
+            <nav className='navbar navbar-expand-lg  nav-justified'>
                 <div className='row container-xxl detailes-1'>
-                    <div className='col-4 d-flex algin-items-center'>
-                        <div className=' d-flex align-items-center pt-2 ps-2 nav-1' >
+                    <div className='col-4'>
+                        <div className='pt-2 ps-2 nav-1' >
                             <Link
                                 to ="/"
                                 className='text-white d-flex'
@@ -31,13 +32,13 @@ const Header = () => {
                     </div>
                     <div className='container-xxl col-7 collapse navbar-collapse' id="navbarSupportedContent">
                         <div>
-                            <ul className='navbar-nav me-auto mt-2 fs-4'>
+                            <ul className='navbar-nav me-auto mt-2 fs-4 text-uppercase me-auto'>
                                 <li className='nav-item'>
                                     <Link
                                         to ="/"
                                         className='text-white nav-item' 
                                     >
-                                        <p className='mb-0'>Home</p>
+                                        <p className='mb-0'  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</p>
                                     </Link>
                                 
                                 </li>
@@ -46,7 +47,7 @@ const Header = () => {
                                         to ="/education"
                                         className='text-white nav-item gap-30'
                                     >
-                                        <p className='mb-0 gap-30'>Eduction</p>
+                                        <p className='mb-0 gap-30'  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Education</p>
                                     </Link>
                                 </li>
                                 <li className='nav-item'>  
@@ -54,7 +55,7 @@ const Header = () => {
                                         to ="/project"
                                         className='text-white nav-item'
                                     >
-                                        <p className='mb-0'>Project</p>
+                                        <p className='mb-0' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Project</p>
                                     </Link>
                                 </li>
                                 <li className='nav-item'>
@@ -62,19 +63,16 @@ const Header = () => {
                                             to ="/contact"
                                             className='text-white nav-item'
                                         >
-                                            <p className='mb-0'>Contact</p>
+                                            <p className='mb-0' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</p>
                                         </Link>
                                 </li>
                                 <li className='nav-item'>
-                                        <Link
-                                            to ="/about"
-                                            className='text-white'
-                                        >
-                                            <p className='mb-0'>About</p>
-                                        </Link>
-                                </li>
-                                <li className='nav-item'>
-                                    <ThemeMenu/>
+                                    <Link
+                                        to ="/about"
+                                        className='text-white'
+                                    >
+                                        <p className='mb-0' data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</p>
+                                    </Link>
                                 </li>
                             </ul>    
                         </div>

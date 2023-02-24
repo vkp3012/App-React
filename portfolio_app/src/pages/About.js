@@ -38,15 +38,13 @@ const About = () => {
 
               <h4 className='pt-2'>Project Details</h4>
               <p className='fs-4 w-100 ps-5'>
-                Hello, I'm Vivek Kumar Patel.I'm from Varanasi Uttar Pardesh , 221107. I have done my B.Tech From United College of Engineering and Resarch
-                Allahabad in 2019. I got 70.22%.
+                Hello, I'm Vivek Kumar Patel.I'm from Varanasi Uttar Pardesh , 221107. I have done my B.Tech From United College of Engineering and Resarch Allahabad in 2019. I got 70.22%.
               </p>
               <p className='fs-4 w-100 ps-5'>
-                In This Project, Details of my education, experences, and create a project details. All github link and website link is pasted here.
+                In This Project, Details of my education, experiences, and create a project details. All GitHub link and website link is pasted here
               </p>
               <p className='fs-4 w-100 ps-5'>
-                In This Application developed using React,BootStrap,Movie Redux and EmailJS. 
-                In this app Show all leatest Details.In This website, direct to email to me. 
+                In This Application developed using React, Bootstrap, Movie Redux and EmailJs. In this app Show all latest Details. In This website, direct to email to me.
               </p>
             </div>
           </div>

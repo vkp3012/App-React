@@ -21,7 +21,7 @@ const Footer = () => {
       </footer>
 
       <footer className='footer-wrapper'>
-      <div className='container-xxl d-flex flex-row p-3'> 
+      <div className='container-xxl p-3'> 
         <div className='row footer-detailes'>
           <div className='col-3 footer-detailes'>
             <h4 className='text-white mb-4'>Information</h4>
@@ -42,9 +42,9 @@ const Footer = () => {
           <div className='col-3 footer-detailes'>
             <h4 className='text-white mb-4'>Social Media</h4>
             <div className='footer-link d-flex flex-column text-white'>
-              <a href='#linkdine' alt="linkedin" className="text-white py-2 mb-1"><BsLinkedin/>&nbsp;&nbsp;Linkedin</a>
-              <a href='#github' alt="github"className="text-white py-2 mb-1"><BsGithub/>&nbsp;&nbsp;GitHub</a>
-              <a href='#twitter' alt="twitter" className="text-white py-2 mb-1"><BsTwitter/>&nbsp;&nbsp;Twitter</a>
+              <a href='https://www.linkedin.com/in/vkp9935/' alt="linkedin" className="text-white py-2 mb-1"><BsLinkedin/>&nbsp;&nbsp;Linkedin</a>
+              <a href='https://github.com/vkp3012' alt="github"className="text-white py-2 mb-1"><BsGithub/>&nbsp;&nbsp;GitHub</a>
+              <a href='https://twitter.com/vivekpatel_er' alt="twitter" className="text-white py-2 mb-1"><BsTwitter/>&nbsp;&nbsp;Twitter</a>
             </div>
           </div>
           <div className='col-3 footer-detailes'>
