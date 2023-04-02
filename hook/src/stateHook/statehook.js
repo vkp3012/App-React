@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 
 const Statehook = () => {
   const [count,setCount] = useState(0)
+  const [count1,setCount1] = useState(0)
   const [value,setValue] = useState("Hello Coder...")
+  const [showText,setShowText] = useState(true);
 
   const inc = () => {
     setCount(count+1);
@@ -42,6 +44,19 @@ const Statehook = () => {
             <h4 className='p-4'>{value}</h4>
           </div>
       </div>
+
+      <div className='row'>
+            <h1>{count1}</h1>
+            <button
+                onClick={()=>{
+                    setCount1(count1+1);
+                    setShowText(!showText)
+                }}
+            >
+                Click Here
+            </button>
+            { showText && <p className='fs-3 p-5 fw-bold'>This is a text</p>}
+        </div>
     </div>
   )
 }

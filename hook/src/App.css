@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+a{
+  padding: 20px 10px;
+  text-decoration: none;
+  color: white;
+}
+
 button{
   border-radius: 35rem;
   padding: 20px;

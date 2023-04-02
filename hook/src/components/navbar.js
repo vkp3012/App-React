@@ -1,15 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Statehook from '../stateHook/statehook';
+import ReducerHook from '../reducer/reducerHook';
 const Navbar = () => {
     return (
-        <div style={{display:"flex",flexDirection:"row",justifyContent:'space-between',textAlign:"center",background:"blue",color:"white",height:"10vh"}}>
-            <h1 style={{padding:"20px"}}>Hook Study Material</h1>
-            <div>
-                <ul style={{padding:"30px 50px",fontSize:"30px",fontWeight:"700"}}>
-                    <Link to = "/" style={{textDecoration: "none" ,color:"white"}}>
+        <div className='d-flex bg-info justify-content-between align-items-center'>
+            <h1 className='p-3 text-light'>Hook Study Material</h1>
+            <div className='p-3'>
+                <ul className="fs-3 fw-bolder">
+                    <Link to = "/">
                         UseState
                         <span>{Statehook} </span>
+                    </Link>
+                    <Link to = "/reducer">
+                        Reducer
+                        <span>{ReducerHook} </span>
                     </Link>
                 </ul>
             </div>
