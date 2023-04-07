@@ -3,6 +3,13 @@ import Navbar from './components/navbar';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Statehook from './stateHook/statehook';
 import ReducerHook from './reducer/reducerHook';
+import UseEffectHook from './useEffect/useEffectHook';
+import RefHook from './refHook/refHook';
+import LayoutEffect from './layoutEffect/layoutEffect';
+import ImperativeHandle from './imperativeHandle/impertiveHandle';
+import ContextHook from './contextHook/contextHook';
+import MemoHook from './memoHook/memoHook';
+import Todo from './todo/todo';
 function App() {
   return (
     <BrowserRouter>
@@ -10,6 +17,13 @@ function App() {
     <Routes>
       <Route path="/" element={<Statehook/>} />
       <Route path="/reducer" element={<ReducerHook/>} />
+      <Route path="/useEffect" element={<UseEffectHook/>} />
+      <Route path="/refHook" element={<RefHook/>} />
+      <Route path="/layouteffect" element={<LayoutEffect/>} />
+      <Route path="/imperativeHandle" element={<ImperativeHandle/>} />
+      <Route path="/contextHook" element={<ContextHook/>} />
+      <Route path="/memoHook" element={<MemoHook/>} />
+      <Route path="/todo" element={<Todo/>} />
     </Routes>
     </BrowserRouter>
   );

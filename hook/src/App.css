@@ -6,7 +6,56 @@
 a{
   padding: 20px 10px;
   text-decoration: none;
+  color: whitesmoke;
+}
+
+.main-dev {
+  min-height: 100vh;
+  background: #060822;
+}
+
+.child-dev{
+  align-items: center;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.addItem{
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 25px;
+  align-items: center;
+  border: none;
+  width: 500px;
+}
+
+.eachItem{
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  width: 500px;
+  margin-top: 20px;
+}
+
+.showItem{
+  display: inline;
+  border: none;
+  margin-top: 20px;
+}
+
+span {
+  margin: 2px;
+  padding: 3px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 button{
@@ -30,4 +79,9 @@ input{
   border-bottom: 2px solid black;
   padding: 10px 20px;
   outline: none;
+}
+
+li{
+  font-size: 20px;
+  font-weight: 500;
 }
