@@ -9,6 +9,8 @@ import ImperativeHandle from '../imperativeHandle/impertiveHandle';
 import ContextHook from '../contextHook/contextHook';
 import MemoHook from '../memoHook/memoHook';
 import Todo from '../todo/todo';
+import Registration from '../admin/registration';
+import Game from '../ticTocGame/game';
 const Navbar = () => {
     return (
         <div className='d-flex bg-secondary justify-content-between align-items-center'>
@@ -55,6 +57,14 @@ const Navbar = () => {
                 <Link to = "/todo" style={{textDecoration:"none",color:"white"}}>
                         Todo
                         <span>{Todo} </span>
+                </Link>
+                <Link to = "/registration" style={{textDecoration:"none",color:"white"}}>
+                        Admin
+                        <span>{Registration} </span>
+                </Link>
+                <Link to = "/game" style={{textDecoration:"none",color:"white"}}>
+                        Tik Toc
+                        <span>{Game} </span>
                 </Link>
             </div>
         </div>

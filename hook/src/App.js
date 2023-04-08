@@ -10,6 +10,8 @@ import ImperativeHandle from './imperativeHandle/impertiveHandle';
 import ContextHook from './contextHook/contextHook';
 import MemoHook from './memoHook/memoHook';
 import Todo from './todo/todo';
+import Registration from './admin/registration';
+import Game from './ticTocGame/game';
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +26,8 @@ function App() {
       <Route path="/contextHook" element={<ContextHook/>} />
       <Route path="/memoHook" element={<MemoHook/>} />
       <Route path="/todo" element={<Todo/>} />
+      <Route path="/registration" element={<Registration/>} />
+      <Route path="/game" element={<Game/>} />
     </Routes>
     </BrowserRouter>
   );
