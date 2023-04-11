@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body{
+  background: url('https://i0.wp.com/onaircode.com/wp-content/uploads/2019/09/wave-animation.jpg?resize=1024%2C574&ssl=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input{
+  border: none;
+  color: rgb(239, 232, 232);
+  margin: 20px;
+  border-bottom: 1px solid white;
+  padding: 10px 5px;
+  outline:none
+}
+
+button{
+  border-radius: 35rem;
+  padding: 10px;
+  width: 40%;
+  margin: 20px;
+  background-color: blue;
+  border: navy;
+  align-items: center;
+}
+
+button:hover{
+  background-color: green;
+}
+
+/* time and date */
+.current-time{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.currentDate{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.temp>p{
+  font-size: 70px;
+  font-weight: 700;
+}
+
+/* todo */
+.eachItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(234, 224, 224);
+}
+
+.bg{
+  background: rgb(43, 43, 43);
+  margin-top: 20px;
+}
+
