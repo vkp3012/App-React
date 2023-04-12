@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import {Link} from "react-router-dom"
 const getLocalItem = () => {
     let list = localStorage.getItem("lists")
     if(list){
@@ -58,7 +58,20 @@ const Todo = () => {
     })
 
     return (
-        <div className='container-xxl d-flex flex-column bg'>
+        <div className='container-xxl d-flex flex-column'>
+               <Link to="/">
+                <button
+                     style={{
+                        // padding:"5px",
+                        fontSize:"25px",
+                        background:"rgb(31, 81, 98)",
+                        width:"40px",
+                        // height:"20px"
+                    }}
+                >
+                    <span>←</span>
+                </button>
+               </Link>
                 <div className='d-flex flex-column justify-content-center align-items-center p-1'>
                     <h1 className='text-dark'>📝</h1>
                     <h5 className='text-light'>Add Your List Name 🔥</h5>
