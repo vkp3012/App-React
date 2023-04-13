@@ -1,6 +1,7 @@
 import React from 'react'
+import { iconUrlFromCode } from "../services/servics";
 
-const Forecast = ({ title }) => {
+const Forecast = ({ title,items }) => {
   return (
     <div>
       <div className="flex items-center justify-start">
@@ -9,7 +10,7 @@ const Forecast = ({ title }) => {
       <hr className="my-2" />
 
       <div className="flex flex-row items-center justify-between text-white">
-        <div
+        {/* <div
           // key={index}
           className="flex flex-col items-center justify-center"
         >
@@ -68,7 +69,21 @@ const Forecast = ({ title }) => {
             alt=""
           />
           <p className="font-medium">32°</p>
-        </div>
+        </div> */}
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center"
+          >
+            <p className="font-light text-sm">{item.title}</p>
+            <img
+              src={iconUrlFromCode(item.icon)}
+              className="w-12 my-1"
+              alt=""
+            />
+            <p className="font-medium">{`${item.temp.toFixed()}°`}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
